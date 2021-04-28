@@ -46,3 +46,15 @@ print(d)
 출력 예시
 63
 '''
+
+a, b, c = map(int, input().split())
+
+d = 1 
+while d%a !=0 or d%b !=0 or d%c !=0 : 
+    d += 1
+    # a b c 로 나눴을 때 나머지가 0이 되는날까지d를 1씩 추가
+print(d)
+
+
+
+

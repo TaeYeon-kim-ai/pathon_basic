@@ -48,11 +48,7 @@ n번째 수를 출력한다.
 #         break
 
 
-#a, m, d, n = map(int, input().split())
-a = int(1)
-m = int(-2)
-d = int(1)
-n = int(8)
+a, m, d, n = map(int, input().split())
 
 start = a
 
