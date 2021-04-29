@@ -53,19 +53,35 @@
 '''
 
 # 오른쪽 = x +1
-# if x == 1 :
+# if x == 0 :
+
     
+m = [[]*10 for _ in range(10)] #맵만들기
+for i in range(10) : #맵값 입력받기
+    m[i] = list(map(int,input().split()))
 
+x = 1
+y = 1
+m[x][y] = 9
 
-m = [
-    [0*10 for i in range(10)]
-]
+while True :
+    if(m[x][y] == 2) :
+        m[x][y]=9
+        break
+    if(m[x][y+1] != 1) :
+        m[x][y] = 9
+        y += 1
+    else : 
+        if(m[x+1][y] != 1) : 
+            m[x][y] = 9
+            x += 1
+        else: 
+            m[x][y] = 9
+            break
 
-print(m)
-
-
-
-
-
+for i in range(10) : # 최종입력 좌표출력 x
+    for j in range(10) : #최종입력 좌표출력 y
+        print(m[i][j], end= ' ')
+    print()
 
 
