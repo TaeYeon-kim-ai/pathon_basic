@@ -32,9 +32,14 @@ M개의 각각의 질문에 대해 그 숫자가 있었으면 1을 출력, 없�
 출력 예시
 0 1 1 0 
 '''
-
 n = int(input())
-n1 = map(int,input().split())
+n1 = list(map(int,input().split()))
 m = int(input())
-m1 = map(int,input().split())
+m1 = list(map(int,input().split()))
 
+for i in range(n) :
+    for j in range(m) : 
+        if m1[j] == n1[i] :
+            print(1, end=' ')
+        elif m1[j] != n1[i]:  
+            print(0, end=' ')
